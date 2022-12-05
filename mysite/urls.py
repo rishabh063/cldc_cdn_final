@@ -17,5 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from members import views 
 urlpatterns = [
-   path('<str:key_id>/', views.index, name='index'),
+   path('query/<str:key_id>/', views.index, name='index'),
+   path('Forcedinvalidate/',views.invalidate, name='invalidate'),
+   path('invalidate/<str:key>/',views.invalidate_specific, name='invalidate_specific')
 ]
