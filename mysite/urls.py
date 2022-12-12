@@ -19,5 +19,6 @@ from members import views
 urlpatterns = [
    path('query/<str:key_id>/', views.index, name='index'),
    path('Forcedinvalidate/',views.invalidate, name='invalidate'),
-   path('invalidate/<str:key>/',views.invalidate_specific, name='invalidate_specific')
+   path('invalidate/<str:key>/',views.invalidate_specific, name='invalidate_specific'),
+   path('health/',views.health, name='health')
 ]
